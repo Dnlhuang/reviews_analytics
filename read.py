@@ -14,7 +14,10 @@ for d in data:
 
 print('每筆留言平均是', sum_len / len(data), '個字')
 
-
-print(data[0])
-print('------------')
-print(data[1])
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d) # 把字數小於100的留言，加入清單(new)
+print('一共有', len(new), '筆留言長度小於100')
+print(new[0])
+print(new[100])
