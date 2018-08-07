@@ -21,3 +21,24 @@ for d in data:
 print('一共有', len(new), '筆留言長度小於100')
 print(new[0])
 print(new[100])
+
+
+good = []
+for g in data:
+	if 'good' in g:
+		good.append(g)
+print('一共有', len(good), '筆留言提到good')
+print(good[0])
+
+
+good = [g for g in data if 'good ' in g]  #等於第26~29行
+# output = [(number-1) for number in reference if number % 2 == 0]
+print(good)
+
+bad = ['bad' in g for g in data]  #第41~43行
+print(bad)
+
+bad = []
+for d in data:
+	bad.append('bad' in d)
+print(bad)
